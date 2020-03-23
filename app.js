@@ -32,9 +32,14 @@ io.on('connection', function(socket) {// socket is your connection
         io.emit('new_message', {id: socket.id, message: msg })
     })
 
+    socket.on('Candidate', function(Candidate){
+        console.log(Candidate);
+        io.emit('newCandidate', Candidate);
+    })
+
     socket.on('disconnect', function(){ 
         console.log('a user has disconnected');
    
-    })
+    });
 
-})
+});
