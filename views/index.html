@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,16 +10,29 @@
 
 <body>
 	<main id="app">
-		<section class="form-container">
-			<label for="nickname">Your Nickname (optional)</label>
-			<input type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
 
-			<form>
+		<!--login screen-->
+
+		<div class="Screen">
+			<div class="login">
+				<h1>Let's start chatting</h1>
+				<p>Please add your name to send messages to others</p>
+				<form class="Form">
+					<label for="nickname">Who's using this awesome chatapp</label>
+					<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
+					<button @click.prevent="dispatchMessage" type="submit"  class="sent"></button>
+				</form>
+			</div>
+		</div>
+		<!-- <section class="form-container"> -->
+			
+
+			<form class="Messages-Form">
 				<label for="message">Something to say?</label>
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
 				<input @click.prevent="dispatchMessage" type="submit">
 			</form>
-		</section>
+		<!-- </section> -->
 
 		<section class="messages">
 			<ul id="messages">
