@@ -31,12 +31,19 @@ io.on('connection', function(socket) {// socket is your connection
         // anyone connected to our chat app will get this message (including the sender)
         io.emit('new_message', {id: socket.id, message: msg })
     })
+    // candidate zone
 
     socket.on('Candidate', function(Candidate){
         console.log(Candidate);
         io.emit('newCandidate', Candidate);
     })
 
+    // Candidate join
+    socket.on('CandidateJoined', function(Candidate){
+        console.log(Candidate + 'has joined the chat');
+        io.emit('newCandidate', Candidate);
+    })
+    
     socket.on('disconnect', function(){ 
         console.log('a user has disconnected');
    
