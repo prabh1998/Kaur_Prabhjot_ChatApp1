@@ -141,6 +141,78 @@ form {
     pointer-events: none;
 }
 
+.CandidateNav{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    list-style: none;
+    background: whitesmoke;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.15);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    h6{
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    .CandidateClick{
+        padding: 8px;
+        cursor: pointer;
+
+        i{
+            font-size: 22px;
+        }
+    }
+}
+
+.CandidateList{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    position: fixed;
+    background: whitesmoke;
+    top: 50px;
+    right: 0;
+    height: 100%;
+    padding: 20px 50px;
+    transform: translateX(500px);
+    transition: all .4s ease;
+    h4{
+        font-size: 20px;
+    }
+    ul{
+        display: flex;
+        flex-direction: column; 
+        li{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 15px;
+            p{
+                font-size: 16px;
+            }
+            .circle{
+                background: green;
+                height: 15px;
+                width: 15px;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+.showNav{
+    transform: translateX(0px);
+}
+
 // imports
 
 @import 'modules/_message';

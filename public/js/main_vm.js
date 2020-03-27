@@ -92,11 +92,11 @@ const loginPage     = document.querySelector('.Screen'),
       });
 
 
-// //player activity bar
-// const playerBut = document.querySelector('.playerClick'),
-//       playerNav = document.querySelector('.playerList');
+//player activity bar
+const CandidateBut = document.querySelector('.CandidateClick'),
+      CandidateNav = document.querySelector('.CandidateList');
 
-//       playerBut.addEventListener('click', function(){
-//           console.log('player nav toggled');
-//           playerNav.classList.toggle('showNav');
-//       })
+      CandidateBut.addEventListener('click', function(){
+          console.log('Candidate nav toggled');
+          CandidateNav.classList.toggle('showNav');
+      })
