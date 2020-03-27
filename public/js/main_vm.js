@@ -92,11 +92,11 @@ const loginPage     = document.querySelector('.Screen'),
       });
 
 
-//player activity bar
+// activity ZONE of candidate
 const CandidateBut = document.querySelector('.CandidateClick'),
-      CandidateNav = document.querySelector('.CandidateList');
+      CandidateZone = document.querySelector('.CandidateList');
 
       CandidateBut.addEventListener('click', function(){
           console.log('Candidate nav toggled');
-          CandidateNav.classList.toggle('showNav');
+          CandidateZone.classList.toggle('showNav');
       })
