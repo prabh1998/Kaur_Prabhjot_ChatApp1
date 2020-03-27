@@ -26,6 +26,21 @@
 		</div>
 		<!-- <section class="form-container"> -->
 
+			<header class="CandidateZone">
+				<h6>{{nickname}}</h6>
+				<li class="CandidateClick"><i class="fas fa-users"></i></li>
+			</header>
+	
+			<!--  Here it display that candidate is online... -->
+			<section class="CandidateList">
+				<h4>Candidate online</h4>
+				<ul id='Candidates'>
+					<li v-for='Candidate in Candidates'>
+						<div class="circle"></div><p>{{ Candidate.Candidate }}</p>
+					</li>
+				</ul>
+			</section>
+
 			<section class="messages">
 				<ul id="messages">
 					<!-- render a new message component for every message -->
